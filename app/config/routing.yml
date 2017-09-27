@@ -1,0 +1,11 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+# FOSUser
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+insect_logout:
+  path: insect/logout
+

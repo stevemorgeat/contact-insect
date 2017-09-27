@@ -1,0 +1,20 @@
+{
+  "name": "contact-insect",
+  "authors": [
+    "stevemorgeat <30505548+stevemorgeat@users.noreply.github.com>"
+  ],
+  "description": "Carnet d'adresses pour les insectes. Car les insectes sont nos amis!! (inscription/authentification/déconnexion, ajouter/lister/supprimer un insecte de sa liste d'amis, affichage détaillé de sa liste de contact.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

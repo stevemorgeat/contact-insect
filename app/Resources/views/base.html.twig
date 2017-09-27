@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Carnet d'adresses{% endblock %}</title>
+    {#on incorpore à notre twig "base" bootstrap qui nous permettra l'utilisation de celui ci sur toutes les pages#}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bower-components/bootstrap/dist/css/bootstrap.css') }}">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+
+
+<body class="container-fluid">
+{# ma navbar importée du site bootstrap #}
+{% include("_navbar.html.twig") %}
+
+{# un titre similaire à toutes les pages#}
+<header class="col-md-10 col-md-offset-1 well">
+    <h1>Le carnet d'adresses de nos amis les insectes</h1>
+</header>
+
+{# ici je met 2 block, un pour le contenu principal et un 2ème pour une parti annexe (dans ce projet ce sera la partie "mon compte" #}
+<div class="row">
+    <div class="col-md-7 col-md-offset-1">
+        {% block body %}  {# ici laffichage des vues #}{% endblock %}
+    </div>
+    <div class="col-md-3">
+        {% block aside %}{% endblock %}
+    </div>
+</div>
+
+{# les liens vers les bibliothèques #}
+{% block javascripts %}
+    <script src="{{ asset('bower-components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('bower-components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>
